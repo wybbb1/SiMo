@@ -93,6 +93,7 @@ type Todo struct {
     Id string
     Status uint
     CreateBy string
+    gorm.Model
 }
 
 const (
