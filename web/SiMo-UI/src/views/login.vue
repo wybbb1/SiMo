@@ -63,7 +63,7 @@ const goHome = () => {
 .login-container {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg, #9cc0ea 0%, #205898 100%);
+    /* background: linear-gradient(135deg, #9cc0ea 0%, #205898 100%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
