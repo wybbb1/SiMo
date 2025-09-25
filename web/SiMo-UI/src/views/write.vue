@@ -24,7 +24,7 @@
                 <Toolbar :editor="editorRef" :defaultConfig="toolbarConfig" :mode="mode"
                     style="border-bottom: 1px solid #ccc" />
                 <Editor :defaultConfig="editorConfig" :mode="mode" v-model="valueHtml"
-                    style="height: 400px; overflow-y: hidden;" @onCreated="handleCreated"
+                    style="height: 500px; overflow-y: hidden;" @onCreated="handleCreated"
                     @onDestroyed="handleDestroyed" />
             </div>
             <div v-else style="width: 90vw;">
@@ -77,18 +77,18 @@ const handleDestroyed = (editor: any) => {
     align-items: center;
     justify-content: flex-start; /* 改为从顶部开始 */
     background-color: #f5f5f5;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
     border-radius: 15px;
     padding-top: 20px; /* 添加顶部内边距 */
 }
 
 .button-group {
-    margin: 20px 0;
+    margin: 10px 0;
     align-self: center; /* 按钮组居中对齐 */
     position: sticky; /* 固定位置 */
     top: 0; /* 固定在顶部 */
-    background-color: #f5f5f5;
+    background-color: #fbf4f4;
     padding: 10px;
     border-radius: 8px;
     z-index: 10; /* 确保在最上层 */
