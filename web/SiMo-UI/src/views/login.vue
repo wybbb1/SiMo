@@ -23,7 +23,7 @@
             </div>
 
             <div class="button-section">
-                <n-button class="login-btn" @click="handleLogin" color="#4ba0d1" round>登录</n-button>
+                <n-button class="login-btn" @click="handleLogin" color="#4CAF50" round>登录</n-button>
                 <n-button class="guest-btn" color="#3dad8d" round>以游客身份登录</n-button>
                 <n-button class="home-btn" :loading="isWaitingLogin" @click="goHome()" round>Go to Home(Test)</n-button>
             </div>
@@ -63,7 +63,7 @@ const goHome = () => {
 .login-container {
     width: 100%;
     height: 100vh;
-    /* background: linear-gradient(135deg, #9cc0ea 0%, #205898 100%); */
+    background: linear-gradient(135deg, #9cc0ea 0%, #205898 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,6 +110,27 @@ const goHome = () => {
     font-weight: normal;
 }
 
+/* Custom styling for naive-ui input components */
+.input-group :deep(.n-input) {
+    height: 48px !important;
+}
+
+.input-group :deep(.n-input .n-input__input-el) {
+    background-color: #9E9E9E !important;
+    border-radius: 6px !important;
+    color: #333 !important;
+    padding: 0 16px !important;
+}
+
+.input-group :deep(.n-input .n-input__border),
+.input-group :deep(.n-input .n-input__state-border) {
+    border: none !important;
+}
+
+.input-group :deep(.n-input--focus .n-input__input-el) {
+    background-color: #8E8E8E !important;
+}
+
 .password-label-row {
     display: flex;
     justify-content: flex-start;
@@ -143,12 +164,14 @@ const goHome = () => {
     height: 36px;
     font-size: 14px;
     font-weight: normal;
+    border-radius: 6px !important;
 }
 
 .guest-btn,
 .home-btn {
     height: 36px;
     font-size: 14px;
+    border-radius: 6px !important;
 }
 
 .login-footer {
