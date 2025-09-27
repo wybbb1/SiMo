@@ -14,7 +14,7 @@ SiMo 是一款专为思维记录而设计的自托管平台，以生活状态区
 ## 后端
 - go 1.25.1
 - 数据存储：sqlite
-- 缓存：本地缓存（库暂定）
+- 缓存：Ristretto
 
 ## 前端
 - vue
@@ -106,3 +106,6 @@ const (
 - 超级管理员：admin，拥有所有权限，包括封禁用户、审核用户、删除用户**已发布**的文章和白板等
 - 普通用户：注册即为普通用户，拥有发布文章、说说、点赞等权限
 - 游客：只能浏览以及点赞公开的文章和说说
+
+# 关于OAuth登录
+SiMo 支持 GitHub OAuth 登录，但是用户需要在 GitHub 上注册 OAuth 应用，并将 ClientID 和 ClientSecret 以及callback URL填入 SiMo 的配置文件中。
