@@ -3,11 +3,11 @@
         <!--mini 模式 只有一个音符-->
         <Transition name="mini-mode" mode="out-in">
             <div v-if="isMini" key="mini" class="mini-container">
-                <button class="circle-button" @click="toggleMini">
-                    <Icon>
+                <n-button size="large" color="#ffffff" circle @click="toggleMini">
+                    <n-icon color="#000000">
                         <MusicNote216Filled />
-                    </Icon>
-                </button>
+                    </n-icon>
+                </n-button>
             </div>
             <!--full 模式 显示完整内容-->
             <div v-else key="full" class="full-container">
@@ -107,6 +107,7 @@
 import { ref, computed, onMounted, onUnmounted, nextTick } from 'vue';
 import { ArrowPrevious24Filled, ArrowNext24Filled, Play48Filled, Pause48Regular, ShareScreenStop16Filled, MusicNote216Filled, AppsListDetail24Regular, ArrowMoveInward20Filled } from '@vicons/fluent';
 import { Icon } from '@vicons/utils'
+import {NButton,NIcon} from 'naive-ui'
 
 
 // 歌曲接口
@@ -299,27 +300,6 @@ onMounted(() => {
 .mini-mode-leave-to {
     opacity: 0;
     transform: scale(1.2) rotateY(-90deg);
-}
-
-/* Mini模式圆形按钮样式 */
-.circle-button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    color: #4CAF50;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    animation: miniModeEnter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* Mini模式进入动画 */
