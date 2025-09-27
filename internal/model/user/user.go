@@ -6,6 +6,7 @@ import "gorm.io/gorm"
 type User struct {
     Id string
     Username string
+    Name string
     Password string
     Status uint
     Avater string

@@ -44,3 +44,6 @@ Thumbs.db
 /bin/
 /build/
 /dist/
+
+/internal/config/config.yml
+

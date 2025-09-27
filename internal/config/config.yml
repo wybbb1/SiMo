@@ -1,0 +1,35 @@
+Database:
+  Type: sqlite # 可选值: mysql, sqlite
+  Sqlite:
+    Path: data/SiMo.db
+  Mysql:
+    Host: 
+    Port: 
+    User: 
+    Password: 
+    DBName: 
+
+Server:
+  Port: "8080"
+
+Jwt:
+  SecretKey: qwertyuiopqwertyuiopqw
+  ExpireHours: 24
+  Issuer: SiMo
+  Subject: Authorization
+  Audience: SiMo
+
+OAuth:
+  ClientID: your_client_id
+  ClientSecret: your_client_secret
+  # 回调地址
+  RedirectURL: "http://localhost:8080/oauth/callback"
+  # 允许的权限范围
+  Scopes:
+    - user
+
+# 日志配置
+Logging:
+  Mode: "development" # 可选值: development, production
+  Path: ["stdout", "app.log"]
+  TimeLayout: "2006-01-02 15:04:05"
